@@ -1,0 +1,431 @@
+/* COLOUR PALETTE */
+
+/*warna utama yang digunakan throughout website*/
+:root {
+    --navy: #263746;
+    --teal: #568B87;
+    --gold: #D5A64A;
+    --off-white: #F5F5F0;
+    --white: #FFFFFF;
+    --charcoal: #343A40;
+    --light-grey: #E8EBE9;
+    --text-grey: #737B80;
+}
+
+/* GENERAL STYLING */
+/*reset default spacing and sizing untuk semua elements*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*basic styling untuk keseluruhan website*/
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--off-white);
+    color: var(--charcoal);
+}
+
+/*Poppins untuk semua main headings*/
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/*buang underline semua links*/
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* MAIN LAYOUT */
+
+/*susun sidebar and main content side by side*/
+.main-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/*main content area untuk setiap page*/
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 20px;
+
+    /*letak background image with transparent overlay*/
+    background-image:
+        linear-gradient(
+            rgba(245, 245, 240, 0.82),
+            rgba(245, 245, 240, 0.82)
+        ),
+        url("../image/bg_page.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* SIDEBAR */
+
+/*design sidebar navigation*/
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background-color: var(--navy);
+    padding: 25px 18px;
+    color: var(--white);
+    flex-shrink: 0;
+}
+
+/*background and susunan logo RailCrew*/
+.sidebar-logo {
+    background-color: rgba(255, 255, 255, 0.864);
+    border-radius: 8px;
+    padding: 5px 8px;
+    margin: 5px auto 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    max-width: 100%;
+}
+
+/*control size dan position logo dalam sidebar*/
+.sidebar-logo img {
+    width: 200px;
+    height: 85px;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* SIDEBAR NAVIGATION */
+
+/*buang default bullet points pada navigation list*/
+.sidebar-menu {
+    list-style: none;
+}
+
+/*jarak antara setiap navigation item*/
+.sidebar-menu li {
+    margin-bottom: 8px;
+}
+
+/*design setiap navigation link*/
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 12px 14px;
+    border-radius: 7px;
+
+    color: var(--white);
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+/*saiz dan kedudukan icon navigation*/
+.sidebar-menu a i {
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/*warna background bila cursor hover atas navigation*/
+.sidebar-menu a:hover {
+    background-color: var(--teal);
+}
+
+/*highlight navigation page yang tengah buka*/
+.sidebar-menu a.active {
+    background-color: var(--teal);
+    font-weight: 600;
+}
+
+
+/* NAVBAR */
+
+/*susun page title and admin profile dalam satu baris*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 15px 25px;
+
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+/*styling title dalam navbar*/
+.navbar h2 {
+    font-size: 20px;
+    color: var(--navy);
+}
+
+/*susun admin icon and name*/
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--navy);
+    font-weight: 600;
+}
+
+/*styling admin profile icon*/
+.admin-profile i {
+    font-size: 28px;
+    color: var(--teal);
+}
+
+
+/* PAGE HEADER */
+
+/*jarak antara page header dengan section bawah*/
+.page-header {
+    margin-bottom: 25px;
+}
+
+/*styling main heading setiap page*/
+.page-header h1 {
+    font-size: 26px;
+    color: var(--navy);
+    margin-bottom: 6px;
+}
+
+/*styling description bawah page heading*/
+.page-header p {
+    font-size: 14px;
+    color: var(--text-grey);
+}
+
+
+/* GENERAL CARD */
+
+/*design basic card yang boleh digunakan dalam semua pages*/
+.card {
+    background-color: var(--white);
+    padding: 22px;
+    border-radius: 10px;
+
+    border: 1px solid var(--light-grey);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+/* BUTTONS */
+
+/*basic styling untuk semua buttons*/
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+
+    border: none;
+    border-radius: 6px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/*main button*/
+.btn-primary {
+    background-color: var(--teal);
+    color: var(--white);
+}
+
+/*ubah warna primary button bila cursor hover*/
+.btn-primary:hover {
+    background-color: var(--navy);
+}
+
+/*secondary button*/
+.btn-secondary {
+    background-color: var(--light-grey);
+    color: var(--charcoal);
+}
+
+/*ubah background secondary button bila hover*/
+.btn-secondary:hover {
+    background-color: #D5DAD7;
+}
+
+
+/* TABLE */
+
+/*pastikan table boleh scroll secara horizontal kalau ruang tak cukup*/
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/*basic table layout*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+}
+
+/*design table heading*/
+thead {
+    background-color: var(--navy);
+    color: var(--white);
+}
+
+/*spacing dan alignment untuk table content*/
+th, td {
+    padding: 14px 15px;
+    text-align: left;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/*styling table heading text*/
+th {
+    font-weight: 600;
+}
+
+/*letak border bawah pada setiap table data row*/
+td {
+    border-bottom: 1px solid var(--light-grey);
+}
+
+/*ubah background row bila cursor hover*/
+tbody tr:hover {
+    background-color: #F7F9F8;
+}
+
+
+/* SEARCH AND INPUT */
+
+/*susun search icon dan input dalam satu container*/
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background-color: var(--white);
+    border: 1px solid var(--light-grey);
+    border-radius: 7px;
+
+    padding: 10px 14px;
+}
+
+/*warna search icon*/
+.search-box i {
+    color: var(--text-grey);
+}
+
+/*styling input dalam search box*/
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+}
+
+/*guna font Inter untuk semua input fields*/
+input, select, textarea {
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* STATUS LABELS */
+
+/*basic design untuk status label*/
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/*status untuk staff yang aktif*/
+.status-active {
+    background-color: #E1F1E8;
+    color: #347A53;
+}
+
+/*status untuk permohonan yang masih menunggu*/
+.status-pending {
+    background-color: #FFF1D6;
+    color: #A87820;
+}
+
+/*status untuk staff yang tidak aktif*/
+.status-inactive {
+    background-color: #FBE4E4;
+    color: #B64A4A;
+}
+
+
+/* NOTIFICATION */
+
+/*susun notification icon dan message*/
+.notification-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    padding: 14px 0;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+/*buang border pada notification item terakhir*/
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+/*styling notification icon*/
+.notification-item i {
+    color: var(--teal);
+    font-size: 17px;
+    margin-top: 3px;
+}
+
+/*styling notification message*/
+.notification-item p {
+    font-size: 13px;
+    color: var(--charcoal);
+}
+
+/*styling masa atau tarikh notification*/
+.notification-item small {
+    display: block;
+    color: var(--text-grey);
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+/*untuk tablet dan screen size sederhana*/
+@media screen and (max-width: 992px) {
+
+    /*kurangkan lebar sidebar*/
+    .sidebar {
+        width: 210px;
+    }
+
+    /*adjust spacing main content*/
+    .main-content {
+        padding: 20px;
+    }
+}

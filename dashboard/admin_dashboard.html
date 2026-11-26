@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RailCrew | Admin Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <img src="image/logo.png" alt="RailCrew Logo">
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li><a href="admin-dashboard.html" class="active">
+                <i class="fa-solid fa-gauge-high"></i>
+                <span>Dashboard</span>
+            </a></li>
+
+            <li><a href="staff.php">
+                <i class="fa-solid fa-id-card"></i>
+                <span>Staff Directory</span>
+            </a></li>
+
+            <li><a href="train.php">
+                <i class="fa-solid fa-train"></i>
+                <span>Train Fleet</span>
+            </a></li>
+
+            <li><a href="train-operations.php">
+                <i class="fa-solid fa-route"></i>
+                <span>Train Operations</span>
+            </a></li>
+
+            <li><a href="crew-roster.php">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span>Crew Scheduling</span>
+            </a></li>
+
+            <li><a href="attendance.php">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Attendance Records</span>
+            </a></li>
+
+            <li><a href="certification.php">
+                <i class="fa-solid fa-certificate"></i>
+                <span>Certification</span>
+            </a></li>
+
+            <li><a href="duty-hours.php">
+                <i class="fa-solid fa-clock"></i>
+                <span>Duty Hours & Rest</span>
+            </a></li>
+
+            <li><a href="standby.php">
+                <i class="fa-solid fa-user-clock"></i>
+                <span>Standby Crew</span>
+            </a></li>
+
+            <li><a href="leave.php">
+                <i class="fa-solid fa-calendar-minus"></i>
+                <span>Leave Requests</span>
+            </a></li>
+
+            <li><a href="crew-replacement.php">
+                <i class="fa-solid fa-users-gear"></i>
+                <span>Crew Replacement</span>
+            </a></li>
+
+            <li><a href="settings.php">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a></li>
+
+            <li><a href="logout.php">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sign Out</span>
+            </a></li>
+
+        </ul>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+
+        <!-- NAVBAR -->
+        <div class="navbar">
+
+            <h2>Dashboard</h2>
+
+            <div class="admin-profile">
+                <i class="fa-solid fa-circle-user"></i>
+                <span>Admin</span>
+            </div>
+
+        </div>
+
+
+        <!-- PAGE HEADER -->
+        <section class="page-header">
+
+            <h1>Welcome Back, Admin!</h1>
+
+            <p>
+                Here's an overview of your railway operations today.
+            </p>
+
+        </section>
+
+
+        <!-- DASHBOARD SUMMARY -->
+        <section class="dashboard-cards">
+
+            <!-- TOTAL REGISTERED STAFF -->
+            <div class="dashboard-card">
+
+                <div class="card-top">
+                    <p>Total Registered Staff</p>
+
+                    <div class="card-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                </div>
+
+                <h2>120</h2>
+
+            </div>
+
+
+            <!-- ACTIVE STAFF -->
+            <div class="dashboard-card">
+
+                <div class="card-top">
+                    <p>Active Staff</p>
+
+                    <div class="card-icon">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                </div>
+
+                <h2>98</h2>
+
+            </div>
+
+
+            <!-- UPCOMING TRAIN RUNS -->
+            <div class="dashboard-card">
+
+                <div class="card-top">
+                    <p>Upcoming Train Runs</p>
+
+                    <div class="card-icon">
+                        <i class="fa-solid fa-train"></i>
+                    </div>
+                </div>
+
+                <h2>24</h2>
+
+            </div>
+
+
+            <!-- PENDING REQUESTS -->
+            <div class="dashboard-card">
+
+                <div class="card-top">
+                    <p>Pending Requests</p>
+
+                    <div class="card-icon">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                    </div>
+                </div>
+
+                <h2>5</h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- LOWER DASHBOARD SECTION -->
+        <section class="dashboard-lower">
+
+
+            <!-- UPCOMING TRAIN RUNS -->
+            <div class="card train-section">
+
+                <h3>Upcoming Train Runs</h3>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Train ID</th>
+                                <th>Route</th>
+                                <th>Departure</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>TR001</td>
+                                <td>KL Sentral - Ipoh</td>
+                                <td>09:30 AM</td>
+                                <td>
+                                    <span class="status status-active">
+                                        On Schedule
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>TR002</td>
+                                <td>KL Sentral - Butterworth</td>
+                                <td>11:00 AM</td>
+                                <td>
+                                    <span class="status status-pending">
+                                        Pending
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>TR003</td>
+                                <td>Gemas - Johor Bahru</td>
+                                <td>01:45 PM</td>
+                                <td>
+                                    <span class="status status-active">
+                                        On Schedule
+                                    </span>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- NOTIFICATIONS -->
+            <div class="card notification-section">
+
+                <h3>Notifications & Alerts</h3>
+
+                <div class="notification">
+                    <p>No new alerts at the moment.</p>
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>

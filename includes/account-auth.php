@@ -212,13 +212,10 @@ function requireRole($conn, $role) {
 
 function dashboardPage($role) {
 
-    // Proposed final destinations.
-    // Enable only after group integration.
+    if ($role === 'Admin') {
 
-    $destinations = [
-        'Admin' => 'settings.html',
-        'Staff' => 'settings.html'
-    ];
+        return 'admin_dashboard.html';
+    }
 
-    return $destinations[$role] ?? 'login.html';
+    return 'settings.html';
 }

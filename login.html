@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>RailCrew | Login</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Leader's global CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Login CSS -->
+
+    <link rel="stylesheet" href="css/login.css">
+
+    <script src="js/login.js" defer></script>
+
+</head>
+
+<body class="login-page">
+
+<main class="login-wrapper">
+
+    <div class="login-container">
+
+        <!-- Brand Section -->
+
+        <section class="login-brand">
+
+            <div class="login-logo">
+
+                <img src="image/logo.png"
+                     alt="RailCrew Logo">
+
+            </div>
+
+            <h2>Crew Management System</h2>
+
+            <p>
+                Efficient railway workforce management.
+            </p>
+
+            <div class="brand-line"></div>
+
+            <div class="brand-features">
+
+                <p>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Secure Account Access
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-users"></i>
+                    Connected Workforce
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-train"></i>
+                    Efficient Railway Operations
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Login Form Section -->
+
+        <section class="login-form-section">
+
+            <div class="login-heading">
+
+                <h1>Welcome Back!</h1>
+
+                <p>
+                    Sign in to access your RailCrew account.
+                </p>
+
+            </div>
+
+            <div id="loginMessage"
+                 class="login-error"
+                 role="alert"
+                 hidden>
+            </div>
+
+
+            <form id="loginForm">
+
+                <!-- Username / Email -->
+
+                <div class="login-form-group">
+
+                    <label for="identifier">
+                        Username / Email
+                    </label>
+
+                    <div class="login-input-box">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <input type="text"
+                               id="identifier"
+                               name="identifier"
+                               placeholder="Enter username or email"
+                               autocomplete="username"
+                               maxlength="100"
+                               required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Password -->
+
+                <div class="login-form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="login-input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input type="password"
+                               id="password"
+                               name="password"
+                               placeholder="Enter your password"
+                               autocomplete="current-password"
+                               required>
+
+                        <button type="button"
+                                id="togglePassword"
+                                class="password-toggle"
+                                aria-label="Show password">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Account Role -->
+
+                <div class="login-form-group">
+
+                    <p class="login-label">Login As</p>
+
+                    <div class="login-roles">
+
+                        <label class="login-role">
+
+                            <input type="radio"
+                                   name="role"
+                                   value="Admin"
+                                   required>
+
+                            <i class="fa-solid fa-user-shield"></i>
+
+                            Administrator
+
+                        </label>
+
+                        <label class="login-role">
+
+                            <input type="radio"
+                                   name="role"
+                                   value="Staff"
+                                   checked
+                                   required>
+
+                            <i class="fa-solid fa-user"></i>
+
+                            Railway Staff
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Login Button -->
+
+                <button type="submit"
+                        id="loginButton"
+                        class="btn btn-primary login-button"
+                        disabled>
+
+                    Sign In
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </form>
+
+            <p class="login-help">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                Contact your administrator if you need
+                account assistance.
+
+            </p>
+
+        </section>
+
+    </div>
+
+    <footer class="login-footer">
+
+        &copy; 2026 RailCrew Management System.
+        All rights reserved.
+
+    </footer>
+
+</main>
+
+</body>
+
+</html>

@@ -1,0 +1,421 @@
+
+/* Account Page */
+
+.settings-page * {
+    box-sizing: border-box;
+}
+
+.settings-page [hidden] {
+    display: none !important;
+}
+
+#loadingMessage {
+    padding: 30px;
+    text-align: center;
+    color: var(--navy);
+}
+
+
+/* Main Layout */
+
+.settings-layout {
+    display: grid;
+    grid-template-columns: 290px minmax(0, 1fr);
+
+    align-items: start;
+    gap: 22px;
+}
+
+
+/* Profile Card */
+
+.settings-profile-card {
+    text-align: center;
+    padding: 30px 22px;
+}
+
+.settings-avatar {
+    width: 110px;
+    height: 110px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    background: #E1EFEB;
+    border: 5px solid var(--off-white);
+
+    color: var(--teal);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.settings-profile-card h2 {
+    font-size: 20px;
+    color: var(--navy);
+    margin-bottom: 6px;
+    overflow-wrap: anywhere;
+}
+
+.settings-position {
+    color: var(--text-grey);
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.settings-divider {
+    height: 1px;
+    background: var(--light-grey);
+    margin: 25px 0;
+}
+
+
+/* Profile Information */
+
+.settings-info-list {
+    text-align: left;
+}
+
+.settings-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.settings-info > i {
+    width: 18px;
+    color: var(--teal);
+    margin-top: 4px;
+    text-align: center;
+}
+
+.settings-info > div {
+    min-width: 0;
+}
+
+.settings-info small {
+    display: block;
+
+    font-size: 12px;
+    color: var(--text-grey);
+    margin-bottom: 4px;
+}
+
+.settings-info strong {
+    display: block;
+
+    font-size: 13px;
+    color: var(--navy);
+    font-weight: 600;
+
+    overflow-wrap: anywhere;
+}
+
+.settings-note {
+    display: flex;
+    gap: 10px;
+
+    background: var(--off-white);
+    border-left: 3px solid var(--gold);
+
+    border-radius: 5px;
+    padding: 12px;
+
+    text-align: left;
+}
+
+.settings-note i {
+    color: var(--gold);
+    margin-top: 3px;
+}
+
+.settings-note p {
+    font-size: 11px;
+    color: var(--text-grey);
+    line-height: 1.7;
+}
+
+
+/* Settings Cards */
+
+.settings-content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.settings-card {
+    padding: 25px;
+}
+
+.settings-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 25px;
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.settings-card-icon {
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+    background: var(--off-white);
+    color: var(--teal);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+.settings-card-heading h3 {
+    color: var(--navy);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.settings-card-heading p {
+    color: var(--text-grey);
+    font-size: 12px;
+}
+
+
+/* Form Fields */
+
+.settings-form-group {
+    display: grid;
+    grid-template-columns: 155px minmax(0, 1fr);
+
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.settings-form-group label {
+    font-size: 13px;
+    font-weight: 500;
+
+    padding-top: 13px;
+
+    color: var(--charcoal);
+}
+
+.settings-form-group input {
+    width: 100%;
+    min-width: 0;
+
+    border: 1px solid var(--light-grey);
+    border-radius: 6px;
+
+    padding: 12px 14px;
+
+    background: var(--white);
+    color: var(--charcoal);
+
+    font-size: 13px;
+    outline: none;
+}
+
+.settings-form-group input:focus {
+    border-color: var(--teal);
+
+    box-shadow: 0 0 0 3px rgba(86, 139, 135, 0.1);
+}
+
+
+/* Password Input */
+
+.settings-password-box {
+    position: relative;
+}
+
+.settings-password-box input {
+    padding-right: 45px;
+}
+
+.settings-password-box .password-toggle {
+    position: absolute;
+    right: 13px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: transparent;
+    border: none;
+
+    color: var(--text-grey);
+    cursor: pointer;
+}
+
+.settings-password-hint {
+    display: block;
+
+    font-size: 11px;
+    color: var(--text-grey);
+
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+
+/* Password Strength */
+
+.password-strength {
+    height: 5px;
+
+    background: var(--light-grey);
+
+    border-radius: 5px;
+    overflow: hidden;
+
+    margin-top: 10px;
+}
+
+#passwordStrengthBar {
+    width: 0;
+    height: 100%;
+    transition: 0.3s;
+}
+
+#passwordStrengthText {
+    display: block;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+
+/* Action Buttons */
+
+.settings-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.settings-actions .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* Messages */
+
+.settings-alert {
+    padding: 14px 18px;
+    border-radius: 7px;
+
+    margin-bottom: 22px;
+
+    font-size: 13px;
+}
+
+.settings-success {
+    background: #E1F1E8;
+    color: #347A53;
+}
+
+.settings-error {
+    background: #FBE4E4;
+    color: #B64A4A;
+}
+
+
+/* Sidebar */
+
+.account-logout-button,
+.account-unavailable-link {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 12px 14px;
+
+    background: transparent;
+    border: none;
+    border-radius: 7px;
+
+    color: var(--white);
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+
+    text-align: left;
+}
+
+.account-logout-button {
+    cursor: pointer;
+}
+
+.account-logout-button:hover {
+    background: var(--teal);
+}
+
+.account-unavailable-link {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+
+/* Responsive Layout */
+
+@media (max-width: 1200px) {
+
+    .settings-layout {
+        grid-template-columns: 250px minmax(0, 1fr);
+    }
+
+    .settings-form-group {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .settings-form-group label {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .settings-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .settings-page .main-container {
+        flex-direction: column;
+    }
+
+    .settings-page .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .settings-page .main-content {
+        padding: 15px;
+    }
+
+    .settings-actions {
+        flex-wrap: wrap;
+    }
+}

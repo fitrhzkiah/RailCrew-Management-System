@@ -1,0 +1,333 @@
+
+/* Login Page Background */
+
+.login-page {
+    min-height: 100vh;
+    margin: 0;
+
+    background:
+        linear-gradient(
+            rgba(245, 245, 240, 0.82),
+            rgba(245, 245, 240, 0.82)
+        ),
+        url("../image/bg_page.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.login-page * {
+    box-sizing: border-box;
+}
+
+
+/* Main Layout */
+
+.login-wrapper {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 1000px;
+
+    display: grid;
+    grid-template-columns: 42% 58%;
+
+    background: var(--white);
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    box-shadow: 0 12px 40px rgba(38, 55, 70, 0.15);
+}
+
+
+/* Brand Section */
+
+.login-brand {
+    background: var(--navy);
+    color: var(--white);
+
+    padding: 45px 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.login-logo {
+    width: 100%;
+    max-width: 290px;
+
+    background: var(--off-white);
+
+    padding: 15px;
+    border-radius: 10px;
+
+    margin-bottom: 30px;
+}
+
+.login-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.login-brand h2 {
+    color: var(--white);
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.login-brand > p {
+    font-size: 13px;
+    color: var(--light-grey);
+    line-height: 1.8;
+}
+
+.brand-line {
+    width: 55px;
+    height: 4px;
+
+    background: var(--gold);
+
+    border-radius: 5px;
+    margin: 25px 0;
+}
+
+.brand-features {
+    text-align: left;
+}
+
+.brand-features p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 13px;
+    margin: 18px 0;
+}
+
+.brand-features i {
+    width: 20px;
+    color: var(--gold);
+}
+
+
+/* Login Form Section */
+
+.login-form-section {
+    padding: 50px 45px;
+}
+
+.login-heading {
+    margin-bottom: 30px;
+}
+
+.login-heading h1 {
+    font-size: 30px;
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+
+.login-heading p {
+    color: var(--text-grey);
+    font-size: 14px;
+}
+
+.login-form-group {
+    margin-bottom: 23px;
+}
+
+.login-form-group > label,
+.login-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+
+/* Input Fields */
+
+.login-input-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    border: 1px solid var(--light-grey);
+    border-radius: 7px;
+
+    padding: 0 14px;
+}
+
+.login-input-box:focus-within {
+    border-color: var(--teal);
+
+    box-shadow: 0 0 0 3px rgba(86, 139, 135, 0.12);
+}
+
+.login-input-box > i {
+    color: var(--teal);
+}
+
+.login-input-box input {
+    width: 100%;
+    min-width: 0;
+
+    border: none;
+    outline: none;
+
+    padding: 15px 0;
+
+    font-size: 14px;
+    color: var(--charcoal);
+
+    background: transparent;
+}
+
+.password-toggle {
+    border: none;
+    background: transparent;
+    color: var(--text-grey);
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+/* Role Selection */
+
+.login-roles {
+    display: flex;
+    gap: 12px;
+}
+
+.login-role {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 13px 10px;
+
+    border: 1px solid var(--light-grey);
+    border-radius: 7px;
+
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.login-role input {
+    accent-color: var(--teal);
+}
+
+.login-role i {
+    color: var(--teal);
+}
+
+.login-role:has(input:checked) {
+    border-color: var(--teal);
+
+    background: rgba(86, 139, 135, 0.08);
+}
+
+
+/* Login Button */
+
+.login-page .login-button {
+    width: 100%;
+    padding: 14px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 14px;
+}
+
+.login-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* Messages */
+
+.login-error {
+    background: #FBE4E4;
+    color: #B64A4A;
+
+    padding: 12px;
+    border-radius: 7px;
+
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.login-help {
+    margin-top: 22px;
+    color: var(--text-grey);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.login-help i {
+    color: var(--teal);
+}
+
+.login-footer {
+    margin-top: 25px;
+    color: var(--text-grey);
+    text-align: center;
+    font-size: 12px;
+}
+
+
+/* Responsive Layout */
+
+@media (max-width: 768px) {
+
+    .login-container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .login-brand {
+        padding: 25px;
+    }
+
+    .login-logo {
+        max-width: 210px;
+        margin-bottom: 15px;
+    }
+
+    .brand-features,
+    .brand-line {
+        display: none;
+    }
+
+    .login-form-section {
+        padding: 30px 25px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .login-roles {
+        flex-direction: column;
+    }
+}

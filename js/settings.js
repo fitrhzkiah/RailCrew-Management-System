@@ -1,11 +1,9 @@
-
 let csrfToken = "";
 let currentProfile = null;
 
 const $ = id => document.getElementById(id);
 
 const profileForm = $("profileForm");
-
 const passwordForm = $("passwordForm");
 
 
@@ -119,18 +117,34 @@ function buildSidebar(role) {
 
     sidebar.replaceChildren();
 
-    // Other members' modules are disabled
-    // until final integration.
+
+    // Generate navigation links
 
     menu.forEach(([label, icon]) => {
 
         const li = document.createElement("li");
 
-        const item = document.createElement("span");
+        let item;
 
-        item.className = "account-unavailable-link";
+        // Enable Admin Dashboard navigation
 
-        item.title = "Pending group integration";
+        if (role === "Admin" && label === "Dashboard") {
+
+            item = document.createElement("a");
+
+            item.href = "admin_dashboard.html";
+
+        } else {
+
+            // Other modules remain disabled
+            // until final group integration.
+
+            item = document.createElement("span");
+
+            item.className = "account-unavailable-link";
+
+            item.title = "Pending group integration";
+        }
 
         const symbol = document.createElement("i");
 
